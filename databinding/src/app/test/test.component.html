@@ -1,0 +1,10 @@
+<h1>{{appName}}</h1>
+<h2>Event Binding</h2> 
+<input type="text" [value]="userName">
+<button (click)="showData($event)">Click here</button>
+<button type="button" [attr.aria-label]="actionName">{{actionName}} with Aria</button><br>
+<p [class]="myCSSClass">This paragraph class comes from *myClass* property </p>
+<p [class.blue]="applyCSSClass">This paragraph class does not apply</p>
+<p [class.blue]="true">This paragraph class does not apply</p>
+<input type="text" [(ngModel)]="myName" />
+<p>Two way binding! Hello {{ myName }}!</p>
