@@ -1,3 +1,50 @@
 <h1 appRedEl>
   Hello World
 </h1>
+<p *ngIf="display">Hello people</p>
+<p>ngIfElse example!</p> 
+<div *ngIf="isLogIn; else isLogOut"> 
+   Hello you are logged in 
+</div>
+<ng-template #isLogOut> 
+   You're logged out.. 
+</ng-template>
+<h2>ngFor directive</h2> 
+<ul> 
+   <li *ngFor="let l of list">
+      {{l}} 
+   </li>
+</ul>
+<ul> 
+  <li *ngFor="let std of studentArr">
+     {{std.name}} 
+  </li>
+</ul>
+<h2>ngSwitch directive</h2> 
+<ul [ngSwitch]="title"> 
+   <li *ngSwitchCase="'user'"> 
+      <p>User is logged in..</p> 
+   </li> 
+   <li *ngSwitchCase="'admin'"> 
+      <p>admin is logged in</p> 
+   </li> 
+   <li *ngSwitchDefault> 
+      <p>Please choose login name</p> 
+   </li> 
+</ul>
+<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}"> 
+   paragraph style is applied using ngStyle 
+</p>
+<div class="container"> 
+   <br/> 
+   <div *ngFor="let user of users" [ngClass]="{ 
+      'highlight':user.userName === 'User1' 
+   }"> 
+      {{ user.userName }} 
+   </div> 
+   <div *ngFor="let std of studentArr" [ngClass]="{ 
+      'highlight':std.id === 1 || std.id===2
+   }"> 
+      {{ std.name }} 
+   </div> 
+</div>
