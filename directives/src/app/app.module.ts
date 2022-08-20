@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RedElDirective } from './red-el.directive';
+import { CustomstyleDirective } from './customstyle.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RedElDirective
+    RedElDirective,
+    CustomstyleDirective
   ],
   imports: [
     BrowserModule,

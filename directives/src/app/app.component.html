@@ -42,7 +42,7 @@
    }"> 
       {{ user.userName }} 
    </div> 
-   <div *ngFor="let std of studentArr" [ngClass]="{ 
+   <div appCustomstyle *ngFor="let std of studentArr" [ngClass]="{ 
       'highlight':std.id === 1 || std.id===2
    }"> 
       {{ std.name }} 
