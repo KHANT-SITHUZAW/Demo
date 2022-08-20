@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RedElDirective } from './red-el.directive';
 import { CustomstyleDirective } from './customstyle.directive';
+import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RedElDirective,
-    CustomstyleDirective
+    CustomstyleDirective,
+    TestcomponentComponent
   ],
   imports: [
     BrowserModule,
