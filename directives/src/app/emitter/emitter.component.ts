@@ -11,7 +11,7 @@ export class EmitterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  addNewItem(value: string) {
+addNewItem(value: string) {
     this.newItemEvent.emit(value);
   }
 }
