@@ -55,3 +55,10 @@
  <ul>
    <li *ngFor="let myitem of myitems">{{myitem}}</li>
  </ul>
+ <h1>Display data list from input value without using output</h1>
+ <label for="input">Add a data:</label>
+ <input type="text" id="input" #newdata>
+ <button type="button" (click)="add(newdata.value)">Add to parent's list</button>
+ <ul>
+   <li *ngFor="let a of arr">{{a}}</li>
+ </ul>

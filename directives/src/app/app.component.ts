@@ -47,4 +47,8 @@ users: User[] = [
    addItem(newItem: string) {
      this.myitems.push(newItem);
    }
+   arr = new Array<string>();
+   add(data: string) {
+      this.arr.push(data);
+    }
 }
