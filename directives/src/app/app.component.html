@@ -49,3 +49,9 @@
    </div> 
 </div>
 <app-testcomponent></app-testcomponent>
+<app-child></app-child>
+<app-child [item]="currentItem"></app-child>
+ <app-emitter (newItemEvent)="addItem($event)"></app-emitter>
+ <ul>
+   <li *ngFor="let myitem of myitems">{{myitem}}</li>
+ </ul>

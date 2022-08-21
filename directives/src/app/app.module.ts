@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { RedElDirective } from './red-el.directive';
 import { CustomstyleDirective } from './customstyle.directive';
 import { TestcomponentComponent } from './testcomponent/testcomponent.component';
+import { ChildComponent } from './child/child.component';
+import { EmitterComponent } from './emitter/emitter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RedElDirective,
     CustomstyleDirective,
-    TestcomponentComponent
+    TestcomponentComponent,
+    ChildComponent,
+    EmitterComponent
   ],
   imports: [
     BrowserModule,

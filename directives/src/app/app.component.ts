@@ -40,5 +40,11 @@ users: User[] = [
       "userId": 2, 
       "userName": 'User2' 
    }, 
-]; 
+   ]; 
+   currentItem = "Parent";
+   myitems = new Array<string>();
+
+   addItem(newItem: string) {
+     this.myitems.push(newItem);
+   }
 }
