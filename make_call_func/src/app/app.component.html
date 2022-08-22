@@ -1,0 +1,8 @@
+<button (click)="getName('Konoha')">Click Here</button>
+<button (click)="getName(100)">Click Here</button>
+<button (click)="getOutput('Mob'+100)">Btn-{{box1.value}}</button>
+<input type="text" placeholder="KeyUp Event" (keyup)="getData(box1.value)" #box1>
+<button type="button" (click)="sendData(box1.value)">Send</button>
+<p>{{sentData}}</p>
+<button (click)="counter(true)">Increase</button><button (click)="counter(false)">Decrease</button>
+<h2>{{count}}</h2>
