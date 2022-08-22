@@ -1,6 +1,7 @@
 <h1 appRedEl>
   Hello World
 </h1>
+<p [appRedEl]="'color'">Highlight me!</p>
 <p *ngIf="display">Hello people</p>
 <p>ngIfElse example!</p> 
 <div *ngIf="isLogIn; else isLogOut"> 
@@ -62,3 +63,11 @@
  <ul>
    <li *ngFor="let a of arr">{{a}}</li>
  </ul>
+ <h1>My First Attribute Directive</h1>
+
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>

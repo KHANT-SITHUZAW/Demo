@@ -7,7 +7,8 @@ import { User } from './user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'directives';
+   title = 'directives';
+   color = 'blue';
   display = false;
   isLogIn : boolean = false;
   isLogOut: boolean = true; 

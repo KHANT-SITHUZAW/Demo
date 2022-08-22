@@ -1,12 +1,12 @@
-import { Directive,ElementRef,HostListener } from '@angular/core';
+import { Directive,ElementRef,HostListener ,OnInit,Input} from '@angular/core';
 
 @Directive({
-  selector: '[appRedEl]'
+  selector: '[appRedEl]'//must be same name
 })
 export class RedElDirective {
-
+  @Input() appRedEl = '';//must be same name with @Input
   constructor(private el: ElementRef) {
-    //el.nativeElement.style.color = "red";
+    el.nativeElement.style.color = "red";
   }
   
    @HostListener('mouseenter') onMouseEnter() {
