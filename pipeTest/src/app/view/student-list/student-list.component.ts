@@ -8,8 +8,8 @@ import { StudentsService } from 'src/app/services/students.service';
 })
 export class StudentListComponent implements OnInit {
   list: Array<Student> = [];
-  constructor(service: StudentsService) { 
-    this.list = service.getAll();
+  constructor( ) { 
+    this.list = StudentsService.getAll();
   }
 
   ngOnInit(): void {
