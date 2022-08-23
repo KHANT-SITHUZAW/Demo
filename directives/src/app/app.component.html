@@ -1,73 +1,74 @@
 <h1 appRedEl>
-  Hello World
+   Hello World
 </h1>
-<p [appRedEl]="'color'">Highlight me!</p>
 <p *ngIf="display">Hello people</p>
-<p>ngIfElse example!</p> 
-<div *ngIf="isLogIn; else isLogOut"> 
-   Hello you are logged in 
+<p>ngIfElse example!</p>
+<div *ngIf="isLogIn; else isLogOut">
+   Hello you are logged in
 </div>
-<ng-template #isLogOut> 
-   You're logged out.. 
+<ng-template #isLogOut>
+   You're logged out..
 </ng-template>
-<h2>ngFor directive</h2> 
-<ul> 
+<h2>ngFor directive</h2>
+<ul>
    <li *ngFor="let l of list">
-      {{l}} 
+      {{l}}
    </li>
 </ul>
-<ul> 
-  <li *ngFor="let std of studentArr">
-     {{std.name}} 
-  </li>
+<ul>
+   <li *ngFor="let std of studentArr">
+      {{std.name}}
+   </li>
 </ul>
-<h2>ngSwitch directive</h2> 
-<ul [ngSwitch]="title"> 
-   <li *ngSwitchCase="'user'"> 
-      <p>User is logged in..</p> 
-   </li> 
-   <li *ngSwitchCase="'admin'"> 
-      <p>admin is logged in</p> 
-   </li> 
-   <li *ngSwitchDefault> 
-      <p>Please choose login name</p> 
-   </li> 
+<h2>ngSwitch directive</h2>
+<ul [ngSwitch]="title">
+   <li *ngSwitchCase="'user'">
+      <p>User is logged in..</p>
+   </li>
+   <li *ngSwitchCase="'admin'">
+      <p>admin is logged in</p>
+   </li>
+   <li *ngSwitchDefault>
+      <p>Please choose login name</p>
+   </li>
 </ul>
-<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}"> 
-   paragraph style is applied using ngStyle 
+<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}">
+   paragraph style is applied using ngStyle
 </p>
-<div class="container"> 
-   <br/> 
+<div class="container">
+   <br />
    <div *ngFor="let user of users" [ngClass]="{ 
       'highlight':user.userName === 'User1' 
-   }"> 
-      {{ user.userName }} 
-   </div> 
+   }">
+      {{ user.userName }}
+   </div>
    <div appCustomstyle *ngFor="let std of studentArr" [ngClass]="{ 
       'highlight':std.id === 1 || std.id===2
-   }"> 
-      {{ std.name }} 
-   </div> 
+   }">
+      {{ std.name }}
+   </div>
 </div>
 <app-testcomponent></app-testcomponent>
 <app-child></app-child>
 <app-child [item]="currentItem"></app-child>
- <app-emitter (newItemEvent)="addItem($event)"></app-emitter>
- <ul>
+<app-emitter (newItemEvent)="addItem($event)"></app-emitter>
+<ul>
    <li *ngFor="let myitem of myitems">{{myitem}}</li>
- </ul>
- <h1>Display data list from input value with</h1>
- <label for="input">Add a data:</label>
- <input type="text" id="input" #newdata>
- <button type="button" (click)="add(newdata.value)">Add to parent's list</button>
- <ul>
+</ul>
+<h1>Display data list from input value with</h1>
+<label for="input">Add a data:</label>
+<input type="text" id="input" #newdata>
+<button type="button" (click)="add(newdata.value)">Add to parent's list</button>
+<ul>
    <li *ngFor="let a of arr">{{a}}</li>
- </ul>
- <h1>My First Attribute Directive</h1>
+</ul>
+<h1>My First Attribute Directive</h1>
 
 <h2>Pick a highlight color</h2>
 <div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  <input [appHighlight]="color" type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input [appHighlight]="color" type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input [appHighlight]="color" type="radio" name="colors" (click)="color='cyan'">Cyan
 </div>
+<span [appHighlight]="color">Highlight me!</span>
+<h6 [appHighlight]="color">Highlight me!</h6>

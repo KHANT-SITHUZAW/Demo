@@ -7,6 +7,7 @@ import { CustomstyleDirective } from './customstyle.directive';
 import { TestcomponentComponent } from './testcomponent/testcomponent.component';
 import { ChildComponent } from './child/child.component';
 import { EmitterComponent } from './emitter/emitter.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EmitterComponent } from './emitter/emitter.component';
     CustomstyleDirective,
     TestcomponentComponent,
     ChildComponent,
-    EmitterComponent
+    EmitterComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

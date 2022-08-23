@@ -7,6 +7,7 @@ import { User } from './user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
    title = 'directives';
    color = 'blue';
   display = false;
