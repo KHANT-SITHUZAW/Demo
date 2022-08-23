@@ -11,4 +11,11 @@ export class AppComponent {
   capString(txt:string) {
     return txt.toUpperCase();
   }
+  str = "hello!How are you?"
+  newstr= this.str.charAt(0).toUpperCase() + this.str.slice(1);
+  user = {
+    realname: "nagato",
+    nickname: "pain",
+    age:"30"
+  }
 }
