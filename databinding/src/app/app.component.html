@@ -2,5 +2,8 @@
 <input type="text" value={{name}} disabled={{disable}}>
 <h1>Property Binding</h1>
 <input type="text" [value]="name" [disabled]="disable">
+<img [src]="src" alt="" [width]="mywidth">
+<h1>Attribute Binding</h1>
+<img [attr.src]="src" [attr.width]="mywidth" alt="">
 <app-test></app-test>
 <app-login></app-login>
