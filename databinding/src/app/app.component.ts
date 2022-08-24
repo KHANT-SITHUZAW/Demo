@@ -14,4 +14,15 @@ export class AppComponent {
   changetxt() {
     this.name = "Kiss Note";
   }
+  changeColor() {
+    if (this.disable) {
+      this.mycolor = 'gray';
+      this.disable = false;
+    }
+    else {
+      this.disable = true;
+        this.mycolor = 'brown';
+      }
+  }
+  mycolor = "red";
 }

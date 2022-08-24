@@ -7,5 +7,7 @@
 <img [attr.src]="src" [attr.width]="mywidth" alt="">
 <h1>Event Binding</h1>
 <button (click)="changetxt()">Change Text</button>
+<h1 [style.color]="mycolor">Style Binding</h1>
+<button type="button" (click)="changeColor()">Change Style</button>
 <app-test></app-test>
 <app-login></app-login>
