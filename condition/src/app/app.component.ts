@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Conditional statements';
+  title1 = 'Simple Conditional statements';
   show = 'true';
   display = 'no';
+  title2 = 'Multiple Conditional statements';
+  name:string="Deku";
 }

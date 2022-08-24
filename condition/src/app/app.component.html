@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1>{{title1}}</h1>
 <span *ngIf="show; then ifBlock else elseBlock">
 </span>
 <ng-template #ifBlock>
@@ -14,4 +14,14 @@
 </ng-template>
 <ng-template #nodisplay>
   <h2>Display No</h2>
+</ng-template>
+<h1>{{title2}}</h1>
+<ng-template [ngIf]="name==='Bakugo'">
+  <h3>Bakugo</h3>
+</ng-template>
+<ng-template [ngIf]="name==='Shoto'">
+  <h3>Shoto</h3>
+</ng-template>
+<ng-template [ngIf]="name==='Deku'">
+  <h3>Deku</h3>
 </ng-template>
