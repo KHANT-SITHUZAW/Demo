@@ -25,3 +25,13 @@
 <ng-template [ngIf]="name==='Deku'">
   <h3>Deku</h3>
 </ng-template>
+<h1>{{title3}}</h1>
+<ul *ngFor="let hero of heroes">
+  <li>{{hero.heroName}}</li>
+  <li>{{hero.realName}}</li>
+  <li>
+    <ul *ngFor="let a of hero.acc">
+      <li>{{a}}</li>
+    </ul>
+  </li>
+</ul>

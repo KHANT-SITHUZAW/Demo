@@ -11,5 +11,10 @@ export class AppComponent {
   show = 'true';
   display = 'no';
   title2 = 'Multiple Conditional statements';
-  name:string="Deku";
+  title3 = 'Nested Loop';
+  name: string = "Deku";
+  heroes = [{ heroName: 'All Might', realName: 'Toshinori',acc:['fb','ig','line']},
+    { heroName: 'Eraser Head', realName: 'Aizawa',acc:['twitter','viber'] },
+    { heroName: 'Red Riot', realName: 'Kirishima',acc:['telegram','ig','line']}
+  ];
 }
