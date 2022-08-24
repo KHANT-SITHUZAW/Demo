@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<span *ngIf="show; then ifBlock else elseBlock">
+</span>
+<ng-template #ifBlock>
+  <h2>If Condition True</h2>
+</ng-template>
+<ng-template #elseBlock>
+  <h2>Else Condition False</h2>
+</ng-template>
+<span *ngIf="display=='yes'; then yesdisplay else nodisplay">
+</span>
+<ng-template #yesdisplay>
+  <h2>Display Yes</h2>
+</ng-template>
+<ng-template #nodisplay>
+  <h2>Display No</h2>
+</ng-template>
