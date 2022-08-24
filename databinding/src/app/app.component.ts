@@ -11,4 +11,7 @@ export class AppComponent {
   name = "Death Note";
   disable = false;
   src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHot-tWgmyAXE3P4o6cE3z4VQUvzmEF_kvEw&usqp=CAU";
+  changetxt() {
+    this.name = "Kiss Note";
+  }
 }
