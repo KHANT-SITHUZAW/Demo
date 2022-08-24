@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +18,8 @@ export class AppComponent {
     { heroName: 'Eraser Head', realName: 'Aizawa',acc:['twitter','viber'] },
     { heroName: 'Red Riot', realName: 'Kirishima',acc:['telegram','ig','line']}
   ];
+  userData: any = {};
+  getFormData(data:NgForm) {
+    this.userData = data;
+  }
 }
