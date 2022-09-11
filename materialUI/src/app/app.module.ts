@@ -8,8 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,13 @@ import { MatTableDataSource } from '@angular/material/table';
     MatTableModule,
     MatButtonModule,
     MatSortModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule
   ],
   exports: [
-    MatTableModule,
-    MatSortModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

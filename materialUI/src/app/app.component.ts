@@ -29,6 +29,9 @@ export class AppComponent implements OnInit, AfterViewInit{
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
   }
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
+  }
 }
 export interface Element {
   name: string;
