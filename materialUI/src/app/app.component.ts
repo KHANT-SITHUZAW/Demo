@@ -1,8 +1,8 @@
 import { Component,ViewChild,OnInit,AfterViewInit } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Owner } from './owner';
-
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,7 @@ import { Owner } from './owner';
 })
 export class AppComponent implements OnInit, AfterViewInit{
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   title = 'materialUI';
   dataSource = new MatTableDataSource<Owner>(ELEMENT_DATA);
   displayedColumns = ['id', 'name', 'dateOfBirth', 'address', 'details', 'update', 'delete'];
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
   public doFilter = (value: string) => {
     this.dataSource.filter = value.trim().toLocaleLowerCase();
@@ -59,6 +61,5 @@ const ELEMENT_DATA: Owner[] = [
   { id: 9, name: 'Hydrogen', dateOfBirth: new Date(), address: 'Hledan' },
   { id: 10, name: 'Hydrogen', dateOfBirth: new Date(), address: 'Hledan' },
   { id: 11, name: 'Hydrogen', dateOfBirth: new Date(), address: 'Hledan' },
-  { id: 12, name: 'Hydrogen', dateOfBirth: new Date(), address: 'Hledan' }
- 
+  { id: 12, name: 'Hydrogen', dateOfBirth: new Date(), address: 'Hledan' } 
 ];
