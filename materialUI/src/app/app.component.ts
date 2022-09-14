@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component,ViewChild,OnInit,AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -24,6 +25,41 @@ export class AppComponent implements OnInit, AfterViewInit{
   public redirectToDelete = (id: string) => {
     
   }
+  Movies = [
+    'Blade Runner',
+    'Cool Hand Luke',
+    'Heat',
+    'Juice',
+    'The Far Side of the World',
+    'Morituri',
+    'Napoleon Dynamite',
+    'Pulp Fiction'
+  ];
+  MoviesList = [
+    'The Far Side of the World',
+    'Morituri',
+    'Napoleon Dynamite',
+    'Pulp Fiction',
+    'Blade Runner',
+    'Cool Hand Luke',
+    'Heat',
+    'Juice'
+  ];
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.MoviesList, event.previousIndex, event.currentIndex);
+  }
+  moviesWatched= [
+  ];
+  onDrop(event: CdkDragDrop<any>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
+  }  
   ngOnInit() {
  
   }
